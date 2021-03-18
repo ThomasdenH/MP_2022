@@ -34,6 +34,7 @@ Ensure you are using RPC to http://localhost:8545.
 
 You may also need to set the chainID to 31337 if you are using Hardhat blockchain development node.
 
+
 ### Common error: Invalid nonce.
 
 ```bash
@@ -43,12 +44,12 @@ eth_sendRawTransaction
 
 Solution: Reset your account in Metamask.
 
+## Develop  
 
 ## Develop  
 
 Make the changes that are required to get the app working smoothly, and any improvements you would like to add. 
 Use any tools/packages you are comfortable with. Feel free to show off your skill set!
-
 
 ## Done? 
 

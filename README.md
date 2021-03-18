@@ -34,7 +34,6 @@ Ensure you are using RPC to http://localhost:8545.
 
 You may also need to set the chainID to 31337 if you are using Hardhat blockchain development node.
 
-
 ### Common error: Invalid nonce.
 
 ```bash

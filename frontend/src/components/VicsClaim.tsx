@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { ethers } from 'ethers';
 import { abi as tokenAbi, address as tokenAddress } from '../hardhat/deployments/localhost/Token.json';
 import { CurrentAddressContext } from "../hardhat/SymfoniContext";
+import { vicMnemonic } from '../Constants';
 
 interface Props { }
 
@@ -19,7 +20,7 @@ export const VicsClaim: React.FC<Props> = () => {
         */
             const provider = new ethers.providers.JsonRpcProvider();
             setVicsWallet( 
-                ethers.Wallet.fromMnemonic("test test test test test test test test test test test junk")
+                ethers.Wallet.fromMnemonic(vicMnemonic)
                 .connect(provider) 
             );
             if (!tokenAddress) return

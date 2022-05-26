@@ -4,6 +4,7 @@ import { Symfoni, SignerContext, TokenContext} from "./hardhat/SymfoniContext";
 import { Greeter } from './components/Greeter';
 import { BorrowFromVic } from './components/BorrowFromVic';
 import { VicsClaim } from './components/VicsClaim';
+import { AccountInfoDisplay } from './components/AccountInfo';
 
 
 function App() {
@@ -60,9 +61,8 @@ function App() {
                   <div >
                     <p > Create a new React component to show the account name and ETH balance of the connected wallet. </p>               
                   </div>
-                  <div style={{alignContent:'flex-end', border:'2px solid white'}}> 0 ETH </div>
+                  <AccountInfoDisplay/>
                 </div>
-                <p style={{fontSize:'14px'}}> (human readable, and dynamically changing would be nice) </p>           
               </li> 
 
               <li> 

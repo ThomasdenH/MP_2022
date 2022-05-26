@@ -1,7 +1,6 @@
 import { parseEther } from "ethers/lib/utils";
 import React, { useContext, useState } from "react";
 import { SignerContext } from "../../hardhat/SymfoniContext";
-import { AccountInfoDisplay } from "../AccountInfo";
 
 export const Assignment2 = () => {
   const [signer] = useContext(SignerContext);

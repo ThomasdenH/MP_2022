@@ -1,18 +1,15 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import "./App.css";
-import { Symfoni, SignerContext, TokenContext } from "./hardhat/SymfoniContext";
+import { Symfoni } from "./hardhat/SymfoniContext";
 import { Greeter } from "./components/Greeter";
 import { BorrowFromVic } from "./components/BorrowFromVic";
 import { VicsClaim } from "./components/VicsClaim";
-import { AccountInfoDisplay } from "./components/AccountInfo";
 import { Assignment1 } from "./components/Assignments/Assignment1";
 import { Assignment2 } from "./components/Assignments/Assignment2";
 import { Assignment3 } from "./components/Assignments/Assignment3";
+import { Assignment4 } from "./components/Assignments/Assignment4";
 
 function App() {
-  /* HINT: this is how to bring in the signerContext */
-  const [signer] = useContext(SignerContext);
-
   return (
     <div className="App">
       <header className="App-header">
@@ -32,6 +29,7 @@ function App() {
                   style={{ color: "white" }}
                   href="https://reactjs.org/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   React
                 </a>{" "}
@@ -40,6 +38,7 @@ function App() {
                   style={{ color: "white" }}
                   href="https://ethereum.org/en/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Ethereum
                 </a>{" "}
@@ -55,6 +54,7 @@ function App() {
                   style={{ color: "white" }}
                   href="https://eips.ethereum.org/EIPS/eip-20"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   ERC20
                 </a>{" "}
@@ -66,6 +66,7 @@ function App() {
                   style={{ color: "white" }}
                   href="https://hardhat.org/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Hardhat
                 </a>{" "}
@@ -78,6 +79,7 @@ function App() {
                   style={{ color: "white" }}
                   href="https://metamask.io/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Metamask
                 </a>{" "}
@@ -114,27 +116,10 @@ function App() {
               <div className="section">
                 Working with ERC20 Tokens:
                 <li>
-                  <Assignment3/>
+                  <Assignment3 />
                 </li>
                 <li>
-                  <div>
-                    <p> Showoff your stolen TST token balance: </p>
-                  </div>
-                  <div
-                    style={{
-                      alignContent: "flex-end",
-                      border: "2px solid white",
-                    }}
-                  >
-                    {" "}
-                    0 TST{" "}
-                  </div>
-
-                  <p style={{ fontSize: "14px" }}>
-                    HINT: This one should be easy after the last. You should use
-                    the 'tokenContext' here ( which has wrapped all the ERC20
-                    functionality ).
-                  </p>
+                  <Assignment4 />
                 </li>
                 <li>
                   <p>

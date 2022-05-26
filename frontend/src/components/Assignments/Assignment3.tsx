@@ -1,19 +1,16 @@
 import { BigNumber, ethers } from "ethers";
 import React, { useContext, useEffect, useState } from "react";
-import {
-  TokenContext,
-  SignerContext,
-} from "../../hardhat/SymfoniContext";
+import { TokenContext, SignerContext } from "../../hardhat/SymfoniContext";
 
 interface Props {}
 
-export const Assignment3 = () => {
+export const Assignment3: React.FC<Props> = () => {
   const [vicsWallet, setVicsWallet] = useState<ethers.Wallet>();
 
   const token = useContext(TokenContext);
   const [signer] = useContext(SignerContext);
 
-  const [amountToSteal, setAmountToSteal] = useState<string>('0');
+  const [amountToSteal, setAmountToSteal] = useState<string>("0");
 
   useEffect(() => {
     (async () => {
@@ -40,15 +37,28 @@ export const Assignment3 = () => {
 
     let connectedToken = token.instance.connect(vicsWallet);
 
-    console.log(`Vics balance: ${await connectedToken.balanceOf(await vicsWallet.getAddress())}`);
+    console.log(
+      `Vics balance: ${await connectedToken.balanceOf(
+        await vicsWallet.getAddress()
+      )}`
+    );
 
     const amountToStealNumber = BigNumber.from(amountToSteal);
     const ownAddress = await signer.getAddress();
-    const gasLimit = await connectedToken.estimateGas.transfer(ownAddress, amountToStealNumber);
-    const txn = await connectedToken.transfer(ownAddress, amountToStealNumber, { gasLimit: gasLimit.mul(2) });
+    const gasLimit = await connectedToken.estimateGas.transfer(
+      ownAddress,
+      amountToStealNumber
+    );
+    const txn = await connectedToken.transfer(ownAddress, amountToStealNumber, {
+      gasLimit: gasLimit.mul(2),
+    });
     await txn.wait();
 
-    console.log(`New balance: ${await connectedToken.balanceOf(await signer.getAddress())}`);
+    console.log(
+      `New balance: ${await connectedToken.balanceOf(
+        await signer.getAddress()
+      )}`
+    );
   };
 
   return (
@@ -58,7 +68,9 @@ export const Assignment3 = () => {
       </div>
       <div>
         <p style={{ fontSize: "14px" }}>
-          <strong>I know a someone who has loads,... 🦈 ! </strong>
+          <strong>
+            I know a someone who has loads,... <span role="img" aria-label='dolphin'>🦈</span> !{" "}
+          </strong>
         </p>
         <p style={{ fontSize: "14px" }}>
           Vic's account holds a lot of TST. Help yourself to it - she left her

@@ -7,6 +7,7 @@ import { VicsClaim } from "./components/VicsClaim";
 import { AccountInfoDisplay } from "./components/AccountInfo";
 import { Assignment1 } from "./components/Assignments/Assignment1";
 import { Assignment2 } from "./components/Assignments/Assignment2";
+import { Assignment3 } from "./components/Assignments/Assignment3";
 
 function App() {
   /* HINT: this is how to bring in the signerContext */
@@ -113,32 +114,7 @@ function App() {
               <div className="section">
                 Working with ERC20 Tokens:
                 <li>
-                  <div>
-                    <p> Get some TST (Test Tokens) </p>
-                  </div>
-                  <div>
-                    <p style={{ fontSize: "14px" }}>
-                      <strong>I know a someone who has loads,... 🦈 ! </strong>
-                    </p>
-                    <p style={{ fontSize: "14px" }}>
-                      Vic's account holds a lot of TST. Help yourself to it -
-                      she left her key under the mat.
-                    </p>
-                    <input placeholder="amount to steal" />{" "}
-                    <button
-                      onClick={() =>
-                        console.log("make this button steal Vics TST")
-                      }
-                    >
-                      {" "}
-                      Steal TST!
-                    </button>
-                    <p style={{ fontSize: "14px" }}>
-                      HINT: If you need some more help here, have a look at the
-                      'BorrowFromVic' and 'VicsClaim' components ... there are
-                      certainly enought hints in those to accomplish the task!!
-                    </p>
-                  </div>
+                  <Assignment3/>
                 </li>
                 <li>
                   <div>

@@ -8,6 +8,7 @@ import { Assignment1 } from "./components/Assignments/Assignment1";
 import { Assignment2 } from "./components/Assignments/Assignment2";
 import { Assignment3 } from "./components/Assignments/Assignment3";
 import { Assignment4 } from "./components/Assignments/Assignment4";
+import { Assignment5 } from "./components/Assignments/Assignment5";
 
 function App() {
   return (
@@ -122,15 +123,7 @@ function App() {
                   <Assignment4 />
                 </li>
                 <li>
-                  <p>
-                    Cover your tracks! Make this <button> button </button>{" "}
-                    transfer <input /> of the Test token (TST) from your account
-                    to another account:
-                    <input /> .
-                  </p>
-                  <p style={{ fontSize: "14px" }}>
-                    HINT: Use the 'tokenContext' here too!
-                  </p>
+                  <Assignment5 />
                 </li>
                 <li>
                   <p>Approve token transfers out of your account</p>

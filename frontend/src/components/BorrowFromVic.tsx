@@ -1,5 +1,6 @@
 import { ethers } from "ethers";
 import React, { useContext, useEffect, useState } from "react";
+import { vicMnemonic } from "../Constants";
 import { CurrentAddressContext } from "../hardhat/SymfoniContext";
 
 interface Props {}
@@ -17,7 +18,7 @@ export const BorrowFromVic: React.FC<Props> = () => {
       const extProvider = new ethers.providers.JsonRpcProvider();
       setVicsWallet(
         ethers.Wallet.fromMnemonic(
-          "test test test test test test test test test test test junk"
+          vicMnemonic
         ).connect(extProvider)
       );
     })();

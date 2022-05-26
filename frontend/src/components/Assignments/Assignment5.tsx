@@ -1,10 +1,9 @@
 import React, { useContext, useState } from "react";
-import { SignerContext, TokenContext } from "../../hardhat/SymfoniContext";
+import { TokenContext } from "../../hardhat/SymfoniContext";
 
 interface Props {}
 
 export const Assignment5: React.FC<Props> = () => {
-  const [signer] = useContext(SignerContext);
   const token = useContext(TokenContext);
 
   const [tokenAmount, setTokenAmount] = useState("0");

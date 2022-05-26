@@ -1,5 +1,6 @@
 import { BigNumber, ethers } from "ethers";
 import React, { useContext, useEffect, useState } from "react";
+import { vicMnemonic } from "../../Constants";
 import { TokenContext, SignerContext } from "../../hardhat/SymfoniContext";
 
 interface Props {}
@@ -7,21 +8,21 @@ interface Props {}
 export const Assignment3: React.FC<Props> = () => {
   const [vicsWallet, setVicsWallet] = useState<ethers.Wallet>();
 
-  const token = useContext(TokenContext);
-  const [signer] = useContext(SignerContext);
-
-  const [amountToSteal, setAmountToSteal] = useState<string>("0");
-
   useEffect(() => {
     (async () => {
       const extProvider = new ethers.providers.JsonRpcProvider();
       setVicsWallet(
         ethers.Wallet.fromMnemonic(
-          "test test test test test test test test test test test junk"
+          vicMnemonic
         ).connect(extProvider)
       );
     })();
   }, []);
+
+  const token = useContext(TokenContext);
+  const [signer] = useContext(SignerContext);
+
+  const [amountToSteal, setAmountToSteal] = useState<string>("0");
 
   const stealTst = async () => {
     if (token.instance === undefined) {

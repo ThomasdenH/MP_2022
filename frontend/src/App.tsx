@@ -3,12 +3,12 @@ import "./App.css";
 import { Symfoni } from "./hardhat/SymfoniContext";
 import { Greeter } from "./components/Greeter";
 import { BorrowFromVic } from "./components/BorrowFromVic";
-import { VicsClaim } from "./components/VicsClaim";
 import { Assignment1 } from "./components/Assignments/Assignment1";
 import { Assignment2 } from "./components/Assignments/Assignment2";
 import { Assignment3 } from "./components/Assignments/Assignment3";
 import { Assignment4 } from "./components/Assignments/Assignment4";
 import { Assignment5 } from "./components/Assignments/Assignment5";
+import { Assignment6 } from "./components/Assignments/Assignment6";
 
 function App() {
   return (
@@ -126,21 +126,7 @@ function App() {
                   <Assignment5 />
                 </li>
                 <li>
-                  <p>Approve token transfers out of your account</p>
-
-                  <p style={{ fontSize: "14px" }}>
-                    <strong>Hey,... VIC IS MAD!!! </strong> She wants some of
-                    her TST back. That's fine - it's not worth much anyway. Give
-                    her permission to take as much as she wants from your
-                    account ( best we give her access to the highest possible
-                    amount: ethers.constants.MaxUint256 ).
-                  </p>
-                  <p style={{ fontSize: "14px" }}>
-                    HINT: The only help I can give you here is to checkout the
-                    ERC20 token spec.
-                  </p>
-
-                  <VicsClaim />
+                  <Assignment6 />
                 </li>
               </div>
 
